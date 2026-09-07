@@ -33,10 +33,6 @@ Converting spoken audio into accurate written text is a core NLP task with appli
 - **Inline audio playback** — the uploaded file is played back in-notebook via `IPython.display.Audio` alongside its transcription, making it easy to verify accuracy.
 - **Zero local setup required** — designed to run directly in Google Colab; the notebook installs `openai-whisper` and `ffmpeg` (required for audio decoding) at the top of the run.
 
-## Bug Fix Applied
-
-The original notebook read the uploaded file using `ipywidgets`' older (7.x) `FileUpload` API — indexing `.value` as a dict via `.values()` and reading the filename from a nested `'metadata'` key. Current `ipywidgets` (8.x, what actually installs today) changed `FileUpload.value` to a plain tuple/list of entries with `'name'`/`'content'` set directly, no `'metadata'` wrapper — so the original code raised `AttributeError: 'tuple' object has no attribute 'values'` the moment a file was uploaded. Verified by inspecting the installed `ipywidgets` package directly; fixed by reading `uploader.value[0]['name']` instead, and confirmed working with a mocked upload event.
-
 ## Tech Stack
 
 | Layer | Technology |

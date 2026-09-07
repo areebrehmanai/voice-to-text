@@ -1,0 +1,63 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ===== Virtual environments =====
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ===== Jupyter Notebook =====
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ===== Model artifacts / large binaries =====
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.pb
+checkpoints/
+saved_models/
+*.weights
+
+# ===== Datasets (large, download separately unless explicitly tracked) =====
+dataset/
+datasets/
+*.zip
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== IDE / editor =====
+.vscode/
+.idea/
+*.swp
+
+# ===== Environment / secrets =====
+.env
+*.env.local
+
+# ===== Logs =====
+*.log
+
+# ===== Notebook checkpoints =====
+.ipynb_checkpoints/
+
+# ===== Audio test files (not committed) =====
+*.mp3
+*.wav

@@ -1,0 +1,3 @@
+openai-whisper>=20231117
+ipywidgets>=8.0.0
+jupyter>=1.0.0
